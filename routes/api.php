@@ -12,3 +12,9 @@ Route::get('/movies/{id}', [MovieController::class, 'show']);
 
 // Crear una nueva película
 Route::post('/movies', [MovieController::class, 'store']);
+
+// Ruta para actualizar una película
+Route::put('/movies/{id}', [MovieController::class, 'update']); 
+
+// Ruta para eliminar una película
+Route::delete('/movies/{id}', [MovieController::class, 'destroy']); 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-03-2025 a las 00:59:33
+-- Tiempo de generación: 01-03-2025 a las 05:52:47
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -148,8 +148,7 @@ INSERT INTO `movies` (`id`, `title`, `synopsis`, `year`, `cover`, `created_at`, 
 (7, 'Eligendi aut voluptate reiciendis.', 'Vel quis sit et distinctio sit sed ut. Aperiam aut unde similique est ut impedit. Iste aperiam est quia et unde autem doloremque.', 1984, 'https://via.placeholder.com/200x300.png/00ffee?text=movies+non', '2025-02-22 12:55:15', '2025-02-22 12:55:15'),
 (8, 'Possimus nihil distinctio atque rem.', 'Qui consequatur quibusdam sed deleniti sunt. Et facilis molestias ea quia architecto ut. Dolor rerum dignissimos officia ut neque. Doloribus numquam suscipit ullam porro est rem quos eum.', 1975, 'https://via.placeholder.com/200x300.png/00bb33?text=movies+laudantium', '2025-02-22 12:55:15', '2025-02-22 12:55:15'),
 (9, 'Est magni facere ut.', 'Sapiente et vitae temporibus quasi voluptatem. Nemo et esse ut ut porro exercitationem. Aut minima vitae hic exercitationem repellat iure.', 2007, 'https://via.placeholder.com/200x300.png/0000dd?text=movies+enim', '2025-02-22 12:55:15', '2025-02-22 12:55:15'),
-(10, 'Aperiam in voluptate.', 'Omnis non quis quibusdam aut aliquam et. Eos ut quisquam sapiente a fugiat.', 1993, 'https://via.placeholder.com/200x300.png/00aabb?text=movies+quia', '2025-02-22 12:55:15', '2025-02-22 12:55:15'),
-(11, 'Nuevo Título de Película', 'Descripción detallada de la película.', 2025, 'https://example.com/cover-image.jpg', '2025-03-01 05:46:47', '2025-03-01 05:46:47');
+(10, 'Aperiam in voluptate.', 'Omnis non quis quibusdam aut aliquam et. Eos ut quisquam sapiente a fugiat.', 1993, 'https://via.placeholder.com/200x300.png/00aabb?text=movies+quia', '2025-02-22 12:55:15', '2025-02-22 12:55:15');
 
 -- --------------------------------------------------------
 
