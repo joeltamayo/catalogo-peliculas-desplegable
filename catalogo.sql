@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 22-02-2025 a las 08:29:41
+-- Tiempo de generación: 01-03-2025 a las 00:59:33
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -148,7 +148,8 @@ INSERT INTO `movies` (`id`, `title`, `synopsis`, `year`, `cover`, `created_at`, 
 (7, 'Eligendi aut voluptate reiciendis.', 'Vel quis sit et distinctio sit sed ut. Aperiam aut unde similique est ut impedit. Iste aperiam est quia et unde autem doloremque.', 1984, 'https://via.placeholder.com/200x300.png/00ffee?text=movies+non', '2025-02-22 12:55:15', '2025-02-22 12:55:15'),
 (8, 'Possimus nihil distinctio atque rem.', 'Qui consequatur quibusdam sed deleniti sunt. Et facilis molestias ea quia architecto ut. Dolor rerum dignissimos officia ut neque. Doloribus numquam suscipit ullam porro est rem quos eum.', 1975, 'https://via.placeholder.com/200x300.png/00bb33?text=movies+laudantium', '2025-02-22 12:55:15', '2025-02-22 12:55:15'),
 (9, 'Est magni facere ut.', 'Sapiente et vitae temporibus quasi voluptatem. Nemo et esse ut ut porro exercitationem. Aut minima vitae hic exercitationem repellat iure.', 2007, 'https://via.placeholder.com/200x300.png/0000dd?text=movies+enim', '2025-02-22 12:55:15', '2025-02-22 12:55:15'),
-(10, 'Aperiam in voluptate.', 'Omnis non quis quibusdam aut aliquam et. Eos ut quisquam sapiente a fugiat.', 1993, 'https://via.placeholder.com/200x300.png/00aabb?text=movies+quia', '2025-02-22 12:55:15', '2025-02-22 12:55:15');
+(10, 'Aperiam in voluptate.', 'Omnis non quis quibusdam aut aliquam et. Eos ut quisquam sapiente a fugiat.', 1993, 'https://via.placeholder.com/200x300.png/00aabb?text=movies+quia', '2025-02-22 12:55:15', '2025-02-22 12:55:15'),
+(11, 'Nuevo Título de Película', 'Descripción detallada de la película.', 2025, 'https://example.com/cover-image.jpg', '2025-03-01 05:46:47', '2025-03-01 05:46:47');
 
 -- --------------------------------------------------------
 
@@ -182,6 +183,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
+('AH1CLS9ol1abOLICG7mpSFTodW1cfTf7arJDNcNo', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiRmVrcmNwWWRvbjRhYVZhSWJ3aU4xTlpoMkdsR3BKSXJFeGVTNEljciI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1740786722),
 ('EZUyZJOtH99zQ6WP34goLxlIq4j21LmvTYyeZEKz', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/133.0.0.0 Safari/537.36 Edg/133.0.0.0', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWFhEN1pqNHVQUGIyaG85WWplQXBGbkFSTUN1Q1pjTEpLNWFIekRYcCI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1740207885);
 
 -- --------------------------------------------------------
@@ -296,7 +298,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
