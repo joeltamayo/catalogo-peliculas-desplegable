@@ -1,0 +1,8 @@
+<ul class="movie-list">
+    <li *ngFor="let movie of movies" class="movie-item">
+        <h3 class="movie-title">{{ movie.title }}</h3>
+        <p class="movie-director">Director: {{ movie.director }}</p>
+        <p class="movie-year">Año: {{ movie.year }}</p>
+        <button class="button" (click)="verDetalles(movie)">Ver detalles </button>
+    </li>
+</ul>

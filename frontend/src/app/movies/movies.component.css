@@ -1,0 +1,56 @@
+/* Contenedor general de la lista de películas */
+.movie-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0% 10%;
+}
+
+/* Estilo de cada película */
+.movie-item {
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    width: 30%;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.movie-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Estilo del título de la película */
+.movie-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.movie-director {
+    font-size: 14px;
+    color: #666;
+}
+
+.movie-year {
+    font-size: 16px;
+    color: #999;
+    margin-top: 5px;
+}
+
+.button {
+    padding: 10px 15px;
+    background-color: #2e2f31;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #2b2b2c;
+}
