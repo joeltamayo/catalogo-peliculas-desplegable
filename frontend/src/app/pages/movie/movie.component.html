@@ -1,0 +1,16 @@
+<div class="container mt-5">
+    <div class="card mx-auto shadow-lg movie-card">
+        <!-- Contenedor para la imagen y el contenido -->
+        <div class="d-flex">
+            <!-- Imagen de la película -->
+            <img [src]="movie?.cover" class="movie-img" alt="Cover de {{ movie?.title }}">
+
+            <!-- Cuerpo de la tarjeta -->
+            <div class="card-body movie-body">
+                <h1 class="card-title">{{ movie?.title }}</h1>
+                <h4 class="text-muted">Año: {{ movie?.year }}</h4>
+                <p class="card-text">{{ movie?.synopsis }}</p>
+            </div>
+        </div>
+    </div>
+</div>

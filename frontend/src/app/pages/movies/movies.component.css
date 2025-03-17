@@ -1,0 +1,52 @@
+img {
+    width: 80px;
+    height: auto;
+}
+
+.table {
+    border-radius: 20px;
+    overflow: hidden; /* Para que respete los bordes redondeados */
+}
+
+tfoot {
+    border-radius: 20px;
+    font-weight: bold;
+}
+.table th, .table td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.img-thumbnail {
+    width: 70px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.modal-content {
+    border-radius: 12px;
+    color: #18191a;
+}
+
+.btn-primary {
+    background-color: #f4f5f7;
+    border-color: #eaf3fa;
+    color: #18191a;
+    font-weight: 700;
+}
+
+.btn-primary:hover {
+    background-color: #e0e4e7;
+}
+
+
+td button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+td button:hover {
+    transform: translateY(-10px);
+}

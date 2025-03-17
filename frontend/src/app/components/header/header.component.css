@@ -1,0 +1,34 @@
+ul {
+    list-style: inside;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+header ul {
+    display: flex;
+}
+
+.nav-link {
+    font-size: larger;
+}
+
+.contenedor-logo {
+    margin: 0 50px 0 30px;
+    padding: 10px;
+}
+
+.logo {
+    max-height: 80px;
+}
+
+li a {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+li a:hover {
+    transform: translateY(-10px);
+}

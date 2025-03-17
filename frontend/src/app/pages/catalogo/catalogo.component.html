@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <h1 class="text-center">Catálogo de Películas</h1>
+
+    <!-- Cuadrícula de Películas -->
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <!-- Iteramos sobre las películas -->
+            <div *ngFor="let movie of movies" class="col-md-4 mb-4">
+                <div class="card shadow-sm">
+                    <!-- Imagen de la película -->
+                    <img [src]="movie.cover" class="card-img-top" alt="Cover de {{ movie.title }}">
+
+                    <!-- Cuerpo de la tarjeta -->
+                    <div class="card-body">
+                        <!-- Título de la película -->
+                        <h5 class="card-title text-center">{{ movie.title }}</h5>
+
+                        <!-- Año de la película -->
+                        <p class="text-muted text-center">Año: {{ movie.year }}</p>
+
+                        <!-- Botones -->
+                        <div class="d-flex buttons">
+                            <!-- Botón Ver Más (Detalles) -->
+                            <button class="btn btn-info btn-sm" (click)="viewMovie(movie.id)" title="VerMas">
+                                <i class="fas fa-eye"></i>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
