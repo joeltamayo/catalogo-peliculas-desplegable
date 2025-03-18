@@ -1,14 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Movie, MovieService } from '../../services/movie.service';
 
 @Component({
-  selector: 'app-movies', // Selector utilizado para hacer referencia a este componente en otros lugares de la aplicación
-  standalone: false, // Indica que este componente no es autónomo y necesita un módulo para funcionar
-  templateUrl: './movies.component.html', // Ubicación del archivo HTML del componente
-  styleUrls: ['./movies.component.css'] // Ubicación del archivo de estilos del componente
+  selector: 'app-movies',
+  standalone: false,
+  templateUrl: './movies.component.html',
+  styleUrls: ['./movies.component.css']
 })
-export class MoviesComponent {
+export class MoviesComponent implements OnInit {
   movies: Movie[] = []; // Array que contendrá las películas obtenidas del servicio
   showForm: boolean = false; // Controla si el formulario de creación/edición está visible
   isEditing: boolean = false; // Determina si el formulario está en modo de edición
@@ -17,8 +17,69 @@ export class MoviesComponent {
   movieData: Movie = { id: 0, title: '', synopsis: '', year: 0, cover: '' };
   // Objeto que contiene los datos de la película a agregar o editar
 
-  constructor(private movieService: MovieService, private router: Router) {
-    this.movies = this.movieService.getMovies(); // Obtiene las películas al inicializar el componente
+  constructor(private movieService: MovieService, private router: Router) { }
+
+  ngOnInit(): void {
+    this.loadMovies(); // Carga las películas al inicializar el componente
+  }
+
+  // Método para cargar las películas desde el backend
+  loadMovies() {
+    this.movieService.getMovies().subscribe(
+      (response) => {
+        this.movies = response; // Asigna las películas recibidas
+      },
+      (error) => {
+        console.error('Error al obtener las películas:', error);
+      }
+    );
+  }
+
+  // Método para guardar una película, ya sea creando una nueva o actualizando una existente
+  saveMovie() {
+    // Verifica que todos los campos del formulario estén completos
+    if (this.movieData.title && this.movieData.synopsis && this.movieData.cover) {
+      if (this.isEditing && this.selectedMovieId !== null) {
+        // Si está en modo de edición, actualiza la película
+        this.movieService.updateMovie(this.selectedMovieId, this.movieData).subscribe(
+          (response) => {
+            console.log('Película actualizada:', response);
+            this.loadMovies(); // Recarga las películas después de actualizar
+            this.closeForm(); // Cierra el formulario
+          },
+          (error) => {
+            console.error('Error al actualizar la película:', error);
+          }
+        );
+      } else {
+        // Si está en modo de creación, agrega una nueva película
+        this.movieService.addMovie(this.movieData).subscribe(
+          (response) => {
+            console.log('Película agregada:', response);
+            this.loadMovies(); // Recarga las películas después de agregar
+            this.closeForm(); // Cierra el formulario
+          },
+          (error) => {
+            console.error('Error al agregar la película:', error);
+          }
+        );
+      }
+    } else {
+      alert("Todos los campos son obligatorios."); // Muestra una alerta si algún campo está vacío
+    }
+  }
+
+  // Método para eliminar una película
+  deleteMovie(id: number) {
+    this.movieService.deleteMovie(id).subscribe(
+      () => {
+        console.log('Película eliminada');
+        this.loadMovies(); // Recarga las películas después de eliminar
+      },
+      (error) => {
+        console.error('Error al eliminar la película:', error);
+      }
+    );
   }
 
   // Método para abrir el formulario en modo de creación o edición
@@ -40,30 +101,6 @@ export class MoviesComponent {
   closeForm() {
     this.showForm = false; // Oculta el formulario
     this.selectedMovieId = null; // Resetea el ID de la película seleccionada
-  }
-
-  // Método para guardar una película, ya sea creando una nueva o actualizando una existente
-  saveMovie() {
-    // Verifica que todos los campos del formulario estén completos
-    if (this.movieData.title && this.movieData.synopsis && this.movieData.cover) {
-      if (this.isEditing && this.selectedMovieId !== null) {
-        // Si está en modo de edición, actualiza la película
-        this.movieService.updateMovie(this.selectedMovieId, this.movieData);
-      } else {
-        // Si está en modo de creación, agrega una nueva película
-        this.movieService.addMovie(this.movieData);
-      }
-      this.movies = this.movieService.getMovies(); // Actualiza la lista de películas
-      this.closeForm(); // Cierra el formulario después de guardar
-    } else {
-      alert("Todos los campos son obligatorios."); // Muestra una alerta si algún campo está vacío
-    }
-  }
-
-  // Método para eliminar una película
-  deleteMovie(id: number) {
-    this.movieService.deleteMovie(id); // Elimina la película por su ID
-    this.movies = this.movieService.getMovies(); // Actualiza la lista de películas
   }
 
   // Método para ver los detalles de una película

@@ -5,7 +5,7 @@ img {
 
 .table {
     border-radius: 20px;
-    overflow: hidden; /* Para que respete los bordes redondeados */
+    overflow: hidden;
 }
 
 tfoot {
