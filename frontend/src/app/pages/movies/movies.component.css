@@ -50,3 +50,7 @@ td button {
 td button:hover {
     transform: translateY(-10px);
 }
+
+.pointer {
+    cursor: pointer;
+}

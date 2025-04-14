@@ -69,17 +69,38 @@ export class MoviesComponent implements OnInit {
     }
   }
 
-  // Método para eliminar una película
-  deleteMovie(id: number) {
-    this.movieService.deleteMovie(id).subscribe(
-      () => {
-        console.log('Película eliminada');
-        this.loadMovies(); // Recarga las películas después de eliminar
-      },
-      (error) => {
-        console.error('Error al eliminar la película:', error);
-      }
-    );
+  // Métodos para eliminar una película
+  showDeleteConfirm: boolean = false; // Controla si se muestra el modal de confirmación
+  movieIdToDelete: number | null = null; // Almacena el ID de la película a eliminar
+
+  // Método que se llama al hacer clic en "Eliminar", muestra el modal
+  promptDelete(id: number) {
+    this.movieIdToDelete = id;
+    this.showDeleteConfirm = true;
+  }
+
+  // Confirmación real de eliminación
+  confirmDelete() {
+    if (this.movieIdToDelete !== null) {
+      this.movieService.deleteMovie(this.movieIdToDelete).subscribe(
+        () => {
+          console.log('Película eliminada');
+          this.loadMovies(); // Recargar lista
+          this.showDeleteConfirm = false;
+          this.movieIdToDelete = null;
+        },
+        (error) => {
+          console.error('Error al eliminar la película:', error);
+          this.showDeleteConfirm = false;
+        }
+      );
+    }
+  }
+
+  // Cancelar la eliminación
+  cancelDelete() {
+    this.showDeleteConfirm = false;
+    this.movieIdToDelete = null;
   }
 
   // Método para abrir el formulario en modo de creación o edición

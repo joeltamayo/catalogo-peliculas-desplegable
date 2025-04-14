@@ -1,7 +1,14 @@
 <div class="container mt-5">
+    <!-- Botón para volver -->
+    <div class="mb-3">
+        <button class="btn btn-secondary" (click)="goBack()">
+            <i class="fa-solid fa-arrow-left"></i> Volver
+        </button>
+    </div>
+
+    <!-- Tarjeta de detalles de la película -->
     <div class="card mx-auto shadow-lg movie-card">
-        <!-- Contenedor para la imagen y el contenido -->
-        <div class="d-flex">
+        <div class="d-flex flex-column flex-md-row">
             <!-- Imagen de la película -->
             <img [src]="movie?.cover" class="movie-img" alt="Cover de {{ movie?.title }}">
 
@@ -10,6 +17,83 @@
                 <h1 class="card-title">{{ movie?.title }}</h1>
                 <h4 class="text-muted">Año: {{ movie?.year }}</h4>
                 <p class="card-text">{{ movie?.synopsis }}</p>
+
+                <!-- Botones de acción -->
+                <div class="d-flex justify-content-center mt-3 gap-2">
+                    <button class="btn btn-warning btn-sm" (click)="openEditForm()" title="Editar">
+                        <i class="fa-solid fa-pencil-alt"></i> Editar
+                    </button>
+                    <button class="btn btn-danger btn-sm" (click)="promptDelete()" title="Eliminar">
+                        <i class="fa-solid fa-trash-alt"></i> Eliminar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal para editar la película -->
+<div class="modal fade show" tabindex="-1" [ngClass]="{'d-block': showEditForm}" *ngIf="showEditForm">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-warning text-dark">
+                <h5 class="modal-title">Editar Película</h5>
+                <button type="button" class="btn-close" (click)="closeEditForm()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form #editForm="ngForm">
+                    <div class="mb-3">
+                        <label class="form-label">Título:</label>
+                        <input type="text" class="form-control" [(ngModel)]="editData.title" name="titulo"
+                            placeholder="Título" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Sinopsis:</label>
+                        <textarea class="form-control" [(ngModel)]="editData.synopsis" name="sinopsis" rows="3"
+                            placeholder="Sinopsis" required></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Año:</label>
+                        <input type="number" class="form-control" [(ngModel)]="editData.year" name="anio"
+                            placeholder="Año" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Imagen (URL):</label>
+                        <input type="url" class="form-control" [(ngModel)]="editData.cover" name="imagen"
+                            placeholder="URL de la imagen" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" (click)="saveEdit()">
+                    <i class="fa-solid fa-floppy-disk"></i> Guardar
+                </button>
+                <button class="btn btn-secondary" (click)="closeEditForm()">
+                    <i class="fa-solid fa-ban"></i> Cancelar
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal de confirmación para eliminar -->
+<div class="modal fade show" tabindex="-1" [ngClass]="{'d-block': showDeleteConfirm}" *ngIf="showDeleteConfirm">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header bg-danger text-light">
+                <h5 class="modal-title">Confirmar Eliminación</h5>
+                <button type="button" class="btn-close" (click)="cancelDelete()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>¿Estás seguro de que deseas eliminar esta película?</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-danger" (click)="confirmDelete()">
+                    <i class="fa-solid fa-trash"></i> Sí, eliminar
+                </button>
+                <button class="btn btn-secondary" (click)="cancelDelete()">
+                    <i class="fa-solid fa-ban"></i> Cancelar
+                </button>
             </div>
         </div>
     </div>

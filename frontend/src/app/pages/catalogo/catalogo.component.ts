@@ -15,7 +15,7 @@ export class CatalogoComponent implements OnInit {
   constructor(
     private movieService: MovieService, // Servicio para obtener y gestionar las películas
     private router: Router // Servicio para manejar la navegación
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.loadMovies(); // Carga las películas al inicializar el componente
