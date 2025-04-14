@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 18-03-2025 a las 02:29:56
+-- Tiempo de generación: 15-04-2025 a las 01:04:01
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.2.12
 
@@ -139,7 +139,7 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`id`, `title`, `synopsis`, `year`, `cover`, `created_at`, `updated_at`) VALUES
-(1, 'El origen 2', 'Dom Cobb es un ladrón especializado en robar secretos del subconsciente durante el sueño. Su habilidad lo ha convertido en un fugitivo, pero se le ofrece la oportunidad de borrar su historial criminal si logra implantar una idea en la mente de una persona. Sin embargo, esta misión es más peligrosa de lo que parece.', 2010, 'https://th.bing.com/th/id/OIP.8xCrva_QkWyr52H7_R1zSgHaLH?rs=1&pid=ImgDetMain', '2025-02-22 12:55:15', '2025-03-18 07:00:03'),
+(1, 'El origen', 'Dom Cobb es un ladrón especializado en robar secretos del subconsciente durante el sueño. Su habilidad lo ha convertido en un fugitivo, pero se le ofrece la oportunidad de borrar su historial criminal si logra implantar una idea en la mente de una persona. Sin embargo, esta misión es más peligrosa de lo que parece.', 2010, 'https://th.bing.com/th/id/OIP.8xCrva_QkWyr52H7_R1zSgHaLH?rs=1&pid=ImgDetMain', '2025-02-22 12:55:15', '2025-04-15 03:11:31'),
 (2, 'El lobo de Wall Street', 'Basada en la historia real de Jordan Belfort, un corredor de bolsa que asciende rápidamente en Wall Street, amasando una gran fortuna mediante fraudes y corrupción. Su vida llena de excesos y fiestas lo lleva a enfrentarse al FBI.', 2013, 'https://i0.wp.com/webadictos.com/media/2014/04/el-lobo-de-wall-street-netflix.jpg?resize=800%2C670', '2025-02-22 12:55:15', '2025-03-18 06:38:16'),
 (3, 'Coco', 'Miguel, un niño apasionado por la música, se embarca en una mágica aventura en la Tierra de los Muertos para descubrir la verdad sobre su familia y su conexión con la música, desafiando la prohibición impuesta por sus ancestros.', 2017, 'https://holatelcel.com/wp-content/uploads/2018/03/COCO.jpg', '2025-02-22 12:55:15', '2025-03-18 06:38:45'),
 (4, 'La llegada', 'Cuando doce naves extraterrestres aterrizan en diferentes partes del mundo, la lingüista Louise Banks es reclutada por el gobierno de EE. UU. para comunicarse con los alienígenas y descubrir sus intenciones. A medida que desentraña el lenguaje de los extraterrestres, Louise se ve enfrentada a complejas cuestiones sobre el tiempo, la comunicación y la naturaleza humana.', 2016, 'https://fotos.perfil.com/2024/05/19/900/0/la-llegada-1804100.jpg', '2025-02-22 12:55:15', '2025-03-18 06:42:48'),
@@ -150,9 +150,9 @@ INSERT INTO `movies` (`id`, `title`, `synopsis`, `year`, `cover`, `created_at`, 
 (9, 'Joker', 'Arthur Fleck, un comediante con problemas mentales, es rechazado por la sociedad y se hunde en la locura, convirtiéndose en el icónico villano Joker. Esta película ofrece una visión cruda y psicológica de los orígenes del enemigo de Batman.', 2019, 'https://th.bing.com/th/id/R.7f70a4e12269db2e3fadf9ae4a63d2d6?rik=aINJC0f50K04rw&riu=http%3a%2f%2fes.web.img3.acsta.net%2fpictures%2f19%2f08%2f29%2f09%2f20%2f1546400.jpg&ehk=%2fbwWgQ6QExpoS9SYQYxsx6izNguhtQDtZTjtb92RS0M%3d&risl=&pid=ImgRaw&r=0', '2025-02-22 12:55:15', '2025-03-18 06:50:58'),
 (10, 'Spider-Man: No Way Home', 'Peter Parker enfrenta las consecuencias de que su identidad secreta sea revelada al mundo. Buscando ayuda de Doctor Strange, provoca un accidente en el multiverso que trae de vuelta a antiguos villanos de otras realidades, poniendo en peligro su universo.', 2021, 'https://www.informador.mx/export/sites/elinformador/img/2021/11/15/fepvsn_wqasaq-i.jpg_1090526674.jpg', '2025-02-22 12:55:15', '2025-03-18 06:52:35'),
 (12, 'It (Eso)', 'Un grupo de niños de Derry, Maine, enfrenta a una entidad maligna que toma la forma de Pennywise, un aterrador payaso. A medida que descubren su oscuro pasado, deberán superar sus miedos para derrotarlo antes de que sea demasiado tarde.', 2017, 'https://lh3.googleusercontent.com/-dUDmwjcppVE/WlZuDNC2wUI/AAAAAAAAxp8/ZJQKLUx61-EJPaTfwFE7eOZI6OX1GplKgCHMYCw/zrtn_013n3a69b9da_tn.jpg?imgmax=800', '2025-03-18 06:21:07', '2025-03-18 06:54:57'),
-(13, 'Oppenheimer', 'Dirigida por Christopher Nolan, esta película biográfica narra la vida de J. Robert Oppenheimer, el físico teórico conocido como el \"padre de la bomba atómica\", y su papel en el Proyecto Manhattan durante la Segunda Guerra Mundial.', 2023, 'https://i.etsystatic.com/10683147/r/il/d4a024/4900691314/il_1080xN.4900691314_fu21.jpg', '2025-03-18 06:21:38', '2025-03-18 06:56:10'),
-(14, 'Dune: Parte Dos', 'Continuación de la épica de ciencia ficción basada en la novela de Frank Herbert, donde Paul Atreides continúa su lucha por liberar el desértico planeta Arrakis y su valioso recurso, la especia.', 2023, 'https://www.scified.com/u/IMG_2118.jpeg', '2025-03-18 06:57:10', '2025-03-18 06:57:10'),
-(15, 'Avatar: El Camino del Agua', 'James Cameron regresa con la esperada secuela de \"Avatar\", explorando nuevas regiones de Pandora y profundizando en la conexión entre los Na\'vi y su mundo natural.', 2023, 'https://gluc.mx/u/fotografias/m/2022/12/15/f768x1-89312_89439_164.jpg', '2025-03-18 06:58:04', '2025-03-18 06:58:04');
+(16, 'Oppenheimer', 'Dirigida por Christopher Nolan, esta película biográfica narra la vida de J. Robert Oppenheimer, el físico teórico conocido como el \"padre de la bomba atómica\", y su papel en el Proyecto Manhattan durante la Segunda Guerra Mundial.', 2023, 'https://i.etsystatic.com/10683147/r/il/d4a024/4900691314/il_1080xN.4900691314_fu21.jpg', '2025-04-15 03:23:21', '2025-04-15 03:37:38'),
+(19, 'Dune: Parte Dos', 'Continuación de la épica de ciencia ficción basada en la novela de Frank Herbert, donde Paul Atreides continúa su lucha por liberar el desértico planeta Arrakis y su valioso recurso, la especia.', 2023, 'https://www.scified.com/u/IMG_2118.jpeg', '2025-04-15 03:40:00', '2025-04-15 03:40:00'),
+(20, 'Avatar: El Camino del Agua', 'James Cameron regresa con la esperada secuela de \"Avatar\", explorando nuevas regiones de Pandora y profundizando en la conexión entre los Na\'vi y su mundo natural.', 2023, 'https://gluc.mx/u/fotografias/m/2022/12/15/f768x1-89312_89439_164.jpg', '2025-04-15 03:40:17', '2025-04-15 03:40:17');
 
 -- --------------------------------------------------------
 
@@ -306,7 +306,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT de la tabla `movies`
 --
 ALTER TABLE `movies`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
