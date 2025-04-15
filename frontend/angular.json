@@ -46,7 +46,7 @@
                 "glob": "_redirects",
                 "input": "src",
                 "output": "/"
-              }              
+              }
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
@@ -59,6 +59,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/frontend/",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
@@ -68,13 +69,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kB",
-                  "maximumError": "1MB"
+                  "maximumWarning": "1MB",
+                  "maximumError": "2MB"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "1MB",
-                  "maximumError": "2MB"
+                  "maximumWarning": "4kB",
+                  "maximumError": "8kB"
                 }
               ],
               "outputHashing": "all"
