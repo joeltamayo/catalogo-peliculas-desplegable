@@ -40,7 +40,12 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "/assets"
-              }
+              },
+              {
+                "glob": "_redirects",
+                "input": "src",
+                "output": "/"
+              }              
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
