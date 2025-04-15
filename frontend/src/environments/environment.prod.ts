@@ -1,4 +1,4 @@
 export const environment = {
     production: true,
-    apiUrl: 'https://tu-backend-en-produccion.com/api'
+    apiUrl: 'https://catalogo-peliculas-desplegable-production.up.railway.app/api'
 };  
