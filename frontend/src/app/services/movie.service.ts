@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment.prod';
 
 // Define la interfaz Movie que define la estructura de los objetos de película
 export interface Movie {
@@ -15,7 +16,7 @@ export interface Movie {
   providedIn: 'root' // Indica que el servicio será inyectado en el root (es decir, estará disponible globalmente)
 })
 export class MovieService {
-  private apiUrl = 'http://localhost:8000/api/movies'; // URL del backend
+  private apiUrl = `${environment.apiUrl}/movies`;
 
   constructor(private http: HttpClient) {} // Inyecta HttpClient
 
