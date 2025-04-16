@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "build": "ng build --configuration production --base-href=/ && mv dist/frontend/browser/* dist/frontend/ && rm -rf dist/frontend/browser",
-    "start": "npx serve -s dist/frontend",
+    "build": "ng build --configuration production --base-href=/",
+    "start": "npx serve -s dist/frontend/browser",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
