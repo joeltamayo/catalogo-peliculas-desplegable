@@ -21,7 +21,7 @@ return [
 
     'allowed_origins' => [
         'http://localhost:4200',
-        'catalogo-movies.up.railway.app'
+        'https://catalogo-movies.up.railway.app'
     ],
 
     'allowed_origins_patterns' => [],
